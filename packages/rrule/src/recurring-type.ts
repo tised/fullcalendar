@@ -43,6 +43,7 @@ export const recurringType: RecurringType<EventRRuleData> = {
     framingRange: DateRange,
     calendarDateEnv: DateEnv,
   ): DateMarker[] {
+    return []
     return eventRRuleData.rruleSet.between(
       // Add one-day leeway since rrule lib only operates in UTC,
       // but the zoned variant of framingRange is not.
